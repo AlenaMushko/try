@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/button.css" />
+</head>
+<body>
+    <section class="section section-window">
+        <div class="container">
+            <a href="./index.html" class="link">назад на головну</a>
+            <P> ...
+            </P>
+    
+            <button class="button" data-modal-open>відкрити модалку</button>
+    
+            <P> ...
+            </P>
+    
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam maxime laudantium
+                        eaque, temporibus consectetur tenetur adipisci dolores porro repudiandae iusto ducimus expedita
+                        quod aspernatur est cumque cupiditate. Doloremque, labore.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi architecto possimus quam nemo
+                        eius vitae autem quas non illo quibusdam? Recusandae voluptas culpa consequuntur veritatis.
+                        Nobis assumenda saepe doloribus dolor.
+                    </p>
+                    <button data-modal-close>закрити</button>
+                </div>
+            </div>
+    
+            <script>
+                const refs = {
+                    openModalBtn: document.querySelector("[data-modal-open]"),
+                    closeModalBtn: document.querySelector("[data-modal-close]"),
+                    modal: document.querySelector("[data-modal]"),
+                };
+
+                refs.openModalBtn.addEventListener("click", toggleModal);
+                refs.closeModalBtn.addEventListener("click", toggleModal);
+
+                function toggleModal() {
+                    refs.modal.classList.toggle("is-hidden");
+                }
+            </script>
+        </div>
+    </section>
+
+</body>
+</html>
